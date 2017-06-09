@@ -1,0 +1,29 @@
+{
+  "name": "react-todoapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "TodoApp.js",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "express": "^4.15.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SparkingR/react-todoapp.git"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "SparkingR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SparkingR/react-todoapp/issues"
+  },
+  "homepage": "https://github.com/SparkingR/react-todoapp#readme"
+}
