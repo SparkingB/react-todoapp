@@ -48,7 +48,7 @@ class TodoApp extends React.Component {
                     onChangeSearch={
                         (content) => {
                             const todosSBK = todosSearchBackUp.length == 0 ? todos : todosSearchBackUp;
-                            const todosAry = _search(todosSBK, content, todosSBK.slice(0));
+                            const todosAry = _search(todosSBK, content, todosSBK);
                             this.setState(
                                 {
                                     todos: todosAry[0],
@@ -109,7 +109,6 @@ const _toggleTodo = (todos, id, completed) => {
 
 const _updateTodo = (todos, id, title) => {
     const idx = todos.findIndex((todo) => todo.id === id);
-    console.log(idx);
     const newTodos = Array.from(todos);
     if (idx!==-1) newTodos[idx].title = title;
     return newTodos;
@@ -118,7 +117,6 @@ const _updateTodo = (todos, id, title) => {
 const _search = (todos, content, todosSearchBackUp) => {
     if (content) {
         const targetAry = todos.filter((el) => (el.title.indexOf(content) >= 0 ? true : false));
-        console.log(todosSearchBackUp);
         return [targetAry, todosSearchBackUp];
     }
     else {
