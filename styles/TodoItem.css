@@ -1,0 +1,78 @@
+.todoitem-view, .todoitem-edit {
+    height: calc( ( 600px * 0.95 - 200px ) / 8 );
+    border-bottom: 1px solid #CCC;
+    background:rgba(94, 96, 165, 0.4);
+}
+
+.todoitem-view input {
+    display: none;
+}
+
+.todoitem-view div {
+    border: 1px solid #FFF;
+    background-color: #FFF;
+    width:  20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 8px;
+}
+
+.todoitem-view input:checked + div::after {
+    content: " ✓";
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+.todoitem-view > #title {
+    position: absolute;
+    top: 40%;
+    left: 50px;
+    transform: translate(0%,-50%);
+
+    color: white;
+    width: 145px;
+    font-size: 18px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.todoitem-view > #date {
+    position: absolute;
+    top: 75%;
+    left: 50px;
+    transform: translate(0%,-50%);
+
+    color: #BBB;
+    font-size: 12px;
+}
+
+.todoitem-view > button {
+    width:  40px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+
+.todoitem-view > button:nth-child(4){
+    right: 10px;
+}
+
+.todoitem-view > button:nth-child(5){
+    right: 55px;
+}
+
+.todoitem-edit > input {
+    width: 200px;
+    height: calc( ( 600px * 0.95 - 200px ) / 10 * 0.6);
+    font-size: 18px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

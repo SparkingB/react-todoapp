@@ -1,0 +1,15 @@
+.todolist-container {
+    width:  100%;
+    height: calc( 600px * 0.95 - 200px );
+    overflow-y: auto;
+}
+
+.todolist {
+    width:  300px;
+    position: absolute;
+    left: 40px;
+}
+
+/*.todolist::-webkit-scrollbar { 
+    width: 0 !important 
+}*/
