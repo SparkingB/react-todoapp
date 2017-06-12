@@ -1,10 +1,10 @@
-
 const {
     TodoHeader,
     InputField,
     TodoList
 } = window.App;
 
+const API_DATA_URL = 'http://localhost:3001/data.json';
 
 class TodoApp extends React.Component {
     constructor(props, context) {
@@ -15,7 +15,7 @@ class TodoApp extends React.Component {
         };
     }
     componentWillMount() {
-        fetch('http://localhost:3010/data.json')
+        fetch(API_DATA_URL)
             .then((response) => response.json())
             .then((todos) => this.setState({ todos: todos }));
     }
