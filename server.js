@@ -2,14 +2,14 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const PORT = 3001;
+const PORT = 3010;
 
-const fakeData = require('./public/todos');
+// const fakeData = require('./public/todos.json');
 
 app.use('/', express.static(__dirname));
 
 app.get('/data.json', (req, res) => {
-  res.sendFile(fakeData);
+  res.sendFile(path.join(__dirname, './public/todos.json'));
 });
 
 app.get('*', (req, res) => {

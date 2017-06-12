@@ -15,7 +15,7 @@ class TodoApp extends React.Component {
         };
     }
     componentWillMount() {
-        fetch('http://localhost:3001/data.json')
+        fetch('http://localhost:3010/data.json')
             .then((response) => response.json())
             .then((todos) => this.setState({ todos: todos }));
     }
