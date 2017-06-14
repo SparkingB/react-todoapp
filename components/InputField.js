@@ -41,7 +41,6 @@ class InputField extends React.Component {
             <div className={className}>
                 <input
                     {...rest}
-                    autoFocus
                     type="text"
                     value={this.state.value}
                     onChange={this.handleChange}

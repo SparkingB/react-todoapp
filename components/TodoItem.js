@@ -45,6 +45,7 @@ class TodoItem extends React.Component {
         return (
 
             <InputField
+                autoFocus
                 className="todoitem-edit"
                 value={title}
                 onBlur={this.toggleEditMode}
