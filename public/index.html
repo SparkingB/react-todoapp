@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="../styles/global.css">
@@ -12,21 +13,27 @@
     <link rel="stylesheet" type="text/css" href="../styles/InputField.css">
     <link rel="stylesheet" type="text/css" href="../styles/TodoList.css">
     <link rel="stylesheet" type="text/css" href="../styles/TodoItem.css">
-    
-    <title>Document</title>
+
+    <title>TodoApp</title>
 </head>
 
 <body>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.4.0/redux.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/4.4.5/react-redux.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
 
     <script>
-        window.App = {}
+        window.App = {};
     </script>
+
+    <script type="text/babel" src="../constants/ActionTypes.js"></script>
+    <script type="text/babel" src="../actions/TodoActions.js"></script>
+    <script type="text/babel" src="../reducers/index.js"></script>
+    <script type="text/babel" src="../reducers/todo.js"></script>
 
     <script type="text/babel" src="../components/TodoHeader.js"></script>
     <script type="text/babel" src="../components/InputField.js"></script>
@@ -35,15 +42,7 @@
     <script type="text/babel" src="../components/TodoApp.js"></script>
 
     <div id="app"></div>
-
-    <script type="text/babel">
-        const { TodoApp } = window.App; 
-        ReactDOM.render(
-            <TodoApp />,
-            document.getElementById('app')
-        );
-    </script>
-
+    <script type="text/babel" src="../main.js"></script>
 
 </body>
 
